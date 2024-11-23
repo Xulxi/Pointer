@@ -1,3 +1,4 @@
+/*
 // let x = 45
 // [ LetToken, IdentifierTk, EqualsToken, NumberToken ]
 
@@ -92,3 +93,4 @@ const source = await Deno.readTextFile("./test.txt");
 for (const token of tokenize(source)) {
     console.log(token);
 }
+*/
