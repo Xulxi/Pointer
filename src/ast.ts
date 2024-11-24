@@ -18,12 +18,14 @@ export interface Program extends Stmt {
 export interface Expr extends Stmt {}
 
 export interface BinaryExpr extends Expr {
-  kind: "BinaryExpr"
+  kind: "BinaryExpr";
+  left: Expr;
+  right: Expr;
 }
 
 export interface Identifier extends Expr {
   kind: "Identifier";
-  symbol: "string";
+  symbol: string;
 }
 
 export interface NumericLiteral extends Expr {
