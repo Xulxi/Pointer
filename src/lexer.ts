@@ -3,11 +3,14 @@
 
 export enum TokenType {
     Number,
-    Comma,
     Direction,
+
+    Comma,
+
     Bit,
     Pointer,
     State,
+    EOF,
 }
 
 const KEYWORDS: Record<string, TokenType> = {
@@ -82,6 +85,7 @@ export function tokenize(sourceCode: string): Token[] {
         }
     }
 
+    tokens.push({type: TokenType.EOF, value: "EndOfFile"});
     return tokens;
 }
 
